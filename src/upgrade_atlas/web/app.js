@@ -68,7 +68,9 @@ async function request(url, options) {
     if (!response.ok) throw new Error(result.error || "Request failed.");
     render(result);
   } catch (error) {
-    $("error").textContent = error.message; $("error").hidden = false;
+    $("error").textContent = error instanceof TypeError
+      ? "Local server unavailable. Restart Upgrade Atlas and try again." : error.message;
+    $("error").hidden = false;
   } finally {
     busy = false; $("example").disabled = false; $("research").textContent = "Research upgrade";
     await status();

@@ -48,4 +48,3 @@ This is not a conversational search wrapper. It enforces package-specific primar
 source boundaries, matches the requested target version, distinguishes snippets
 from inspected documents, and carries search IDs and uncovered questions into an
 exportable review packet. A generic answer box was replaced with a review ledger.
-

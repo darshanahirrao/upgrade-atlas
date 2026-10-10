@@ -21,7 +21,8 @@
 
 No real SerpApi request, hackathon account, recorded end-to-end live demonstration,
 final entry, award or payout is verified. Mock-provider tests are not a substitute
-for those release gates. Hosted CI must be checked after source publication.
+for those release gates. Hosted GitHub CI38039691233 passed64 tests and both Ruff
+checks on executable commitf70f1c1. No live provider key was used by CI.
 
 The tool searches for target-release evidence but does not fetch the cited pages,
 run project regression tests, validate that a release exists or certify an
@@ -43,4 +44,3 @@ Durable run evidence outside the public package includes
 upgrade-atlas-layout-checks.json, desktop/mobile screenshots and the free-account
 approval screenshot. The README screenshot is explicitly synthetic. No private
 keys or provider datasets are published.
-

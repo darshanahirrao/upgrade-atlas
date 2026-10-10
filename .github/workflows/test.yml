@@ -15,3 +15,4 @@ jobs:
       - run: pytest -q
       - run: ruff check .
       - run: ruff format --check .
+      - run: node --check src/upgrade_atlas/web/app.js

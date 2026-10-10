@@ -15,6 +15,9 @@ access, demo recording and competition submission are **not yet verified**.
 The synthetic example is invented test data and never becomes a fallback for a
 failed live call. See [QA.md](QA.md) for the exact boundaries.
 
+[Hosted CI](https://github.com/darshanahirrao/upgrade-atlas/actions/runs/38039691233)
+passes the same 64 tests and lint/format gates without a provider key.
+
 ![Explicitly synthetic evidence ledger, not live SerpApi data](docs/synthetic-preview.jpg)
 
 ## Run
