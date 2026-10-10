@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.26,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "upgrade-atlas"
+version = "0.1.0"
+description = "Primary-source dependency upgrade research with SerpApi"
+requires-python = ">=3.11"
+dependencies = ["packaging>=24,<27"]
+
+[project.scripts]
+upgrade-atlas = "upgrade_atlas.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.13,<1"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/upgrade_atlas"]
+

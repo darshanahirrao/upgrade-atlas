@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Upgrade Atlas</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header><h1>Upgrade Atlas</h1><p id="readiness" role="status">Checking provider...</p><label for="theme" class="theme-label">Theme<select id="theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label></header>
+  <main>
+    <aside>
+      <form id="research-form">
+        <h2>Dependency upgrade</h2>
+        <label for="package">Package</label>
+        <select id="package" name="package"><option>numpy</option><option>pydantic</option><option>django</option><option>sqlalchemy</option></select>
+        <label for="current">Current version</label><input id="current" name="current" value="1.26.4" required maxlength="40">
+        <label for="target">Target version</label><input id="target" name="target" value="2.0.0" required maxlength="40">
+        <button id="research" type="submit">Research upgrade</button>
+        <p id="error" role="alert" hidden></p>
+      </form>
+      <button id="example" type="button" class="secondary">Synthetic example</button>
+      <p class="note">Research only. No code edits, installations or upgrade approval.</p>
+      <dl><dt>Source policy</dt><dd>Official docs and package repositories</dd><dt>Local request budget</dt><dd id="budget">0 / 12 searches</dd></dl>
+    </aside>
+    <section class="ledger" aria-label="Upgrade evidence">
+      <div id="empty"><h2>Evidence ledger</h2><p>No upgrade researched.</p></div>
+      <section id="report" hidden>
+        <div class="report-head"><div><p id="mode" class="mode"></p><h2 id="pair"></h2><p id="timestamp" class="note"></p></div><div class="exports"><button id="json-export" type="button" class="secondary">Export JSON</button><button id="md-export" type="button" class="secondary">Export Markdown</button></div></div>
+        <p class="verdict">Review required</p>
+        <table><caption>Exact-target source coverage</caption><thead><tr><th scope="col">Research purpose</th><th scope="col">Cited snippets</th></tr></thead><tbody id="coverage"></tbody></table>
+        <h3>Open review questions</h3><ul id="gaps"></ul>
+        <h3>Primary-source ledger</h3><div id="sources"></div>
+        <h3>Search provenance</h3><div id="searches"></div>
+        <h3>Evidence limits</h3><ul id="limits"></ul>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
